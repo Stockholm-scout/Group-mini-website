@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 6 - Contact Me Form</title>
+    <style>
+        /* Basic styling for neat layout and readability */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .inline-label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button[type="submit"] {
+            background-color: #28a745;
+            color: white;
+        }
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+        button[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+        }
+        button[type="reset"]:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Contact Me</h2>
+        
+        <form action="#" method="POST">
+            
+            <!-- Text Fields: Name, Email, Subject -->
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter the subject of your message" required>
+            </div>
+
+            <!-- Radio Buttons: Preferred Contact Method -->
+            <div class="form-group">
+                <label>Preferred Contact Method:</label>
+                <input type="radio" id="contact-email" name="contact_method" value="email" required>
+                <label for="contact-email" class="inline-label">Email</label>
+
+                <input type="radio" id="contact-phone" name="contact_method" value="phone">
+                <label for="contact-phone" class="inline-label">Phone</label>
+            </div>
+
+            <!-- Dropdown Menu: Reason for Contact -->
+            <div class="form-group">
+                <label for="reason">Reason for Contact:</label>
+                <select id="reason" name="reason" required>
+                    <option value="" disabled selected>-- Select a reason --</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="support">Support</option>
+                    <option value="collaboration">Collaboration</option>
+                </select>
+            </div>
+
+            <!-- Bonus: Textarea for detailed messages -->
+            <div class="form-group">
+                <label for="message">Detailed Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your detailed message here..." required></textarea>
+            </div>
+
+            <!-- Checkboxes: Newsletter & Updates -->
+            <div class="form-group">
+                <div>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                    <label for="newsletter" class="inline-label">Subscribe to Newsletter</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="updates" name="updates" value="yes">
+                    <label for="updates" class="inline-label">Receive Updates</label>
+                </div>
+            </div>
+
+            <!-- Submit and Bonus Reset Buttons -->
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset Form</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
+
